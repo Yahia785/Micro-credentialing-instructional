@@ -1056,6 +1056,129 @@ input:focus {
     }
 }
 
+
+/* ============================================
+   COLLAPSIBLE ANNOUNCEMENTS
+   ============================================ */
+.announcements-intro {
+    font-style: italic;
+    color: #666;
+    margin-bottom: var(--spacing-lg);
+}
+
+.announcement-item {
+    background-color: var(--vt-white);
+    border: 2px solid var(--vt-medium-gray);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-md);
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.announcement-item:hover {
+    border-color: var(--vt-orange);
+}
+
+.announcement-item[open] {
+    border-color: var(--vt-maroon);
+}
+
+.announcement-header {
+    list-style: none;
+    cursor: pointer;
+    padding: var(--spacing-md);
+    background-color: var(--vt-light-gray);
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+}
+
+.announcement-header::-webkit-details-marker {
+    display: none;
+}
+
+.announcement-header::before {
+    content: "▶";
+    display: inline-block;
+    margin-right: var(--spacing-sm);
+    transition: transform 0.3s ease;
+    color: var(--vt-orange);
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.announcement-item[open] .announcement-header::before {
+    transform: rotate(90deg);
+}
+
+.announcement-header:hover {
+    background-color: #e8e8e8;
+}
+
+.announcement-header h2 {
+    margin: 0;
+    color: var(--vt-maroon);
+    font-size: 1.3rem;
+    flex-grow: 1;
+}
+
+.announcement-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--spacing-xs);
+    flex-shrink: 0;
+}
+
+.announcement-meta .date {
+    color: var(--vt-orange);
+    font-weight: 600;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.announcement-meta .author {
+    color: var(--vt-maroon);
+    font-weight: 600;
+    font-style: italic;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.announcement-content {
+    padding: var(--spacing-md);
+    line-height: 1.8;
+}
+
+.announcement-content h3 {
+    color: var(--vt-maroon);
+    font-size: 1.2rem;
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+.announcement-content p {
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Mobile responsiveness for announcements */
+@media (max-width: 768px) {
+    .announcement-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .announcement-meta {
+        align-items: flex-start;
+    }
+
+    .announcement-meta .date,
+    .announcement-meta .author {
+        white-space: normal;
+    }
+}
 /* ============================================
    END OF STYLESHEET
    ============================================ */
