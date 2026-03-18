@@ -11,9 +11,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="announcements.html">Announcements</a></li>
                 <li><a href="onboarding.html">Onboarding</a></li>
-                <li><a href="assignments.html">Assignments</a></li>
                 <li><a href="resources.html">Resources</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="about.html">About</a></li>
@@ -103,7 +101,7 @@
             <p>Ready to participate in the pilot program?</p>
             <div class="cta-buttons">
                 <a href="onboarding.html" class="button button-primary">View Onboarding Instructions</a>
-                <a href="[PLATFORM_URL]" target="_blank" class="button button-secondary">Access Platform</a>
+                <a href="https://main.dn9on5ji0olal.amplifyapp.com" target="_blank" class="button button-secondary">Access Platform</a>
             </div>
             <p class="contact-info">Questions? <a href="contact.html">Contact us</a> or attend office hours.</p>
         </section>
@@ -118,7 +116,11 @@
                 <dd>You are allowed <strong>one submission only</strong> for the onboarding problem. Make sure to test your code thoroughly using the onlineGDB tool before submitting.</dd>
 
                 <dt>Will my proctoring recordings be shared?</dt>
-                <dd>No. Recordings are reviewed only by course staff for academic integrity purposes and are not shared with anyone else.</dd>
+                <dd>
+                    <p>No. Recordings are reviewed only by course staff for academic integrity purposes and are not shared with anyone else.</p>
+                    <p>From a technical standpoint, recordings are stored securely in Amazon S3 (an AWS cloud storage service) and are encrypted both at rest and during transit. No biometric data or derived features are extracted from your recordings — only the raw video is stored for staff review.</p>
+                    <p>Future versions of the platform are planned to incorporate additional privacy-preserving techniques, such as background blurring and other anonymization methods, to further minimize the personal data captured during proctoring sessions.</p>
+                </dd>
             </dl>
         </section>
 
